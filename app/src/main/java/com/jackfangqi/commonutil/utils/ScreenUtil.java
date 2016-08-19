@@ -3,6 +3,7 @@ package com.jackfangqi.commonutil.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 
 /**
  * Compiler: Android Studio
@@ -61,5 +62,31 @@ public final class ScreenUtil {
         DisplayMetrics metrics = new DisplayMetrics();
         ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
         return metrics.heightPixels;
+    }
+
+    public static int getStatusBarHeight(Context context) {
+        int statusBarHeight = 0;
+
+        if (context == null)
+            return statusBarHeight;
+
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0)
+            statusBarHeight = context.getResources().getDimensionPixelSize(resourceId);
+
+        return statusBarHeight;
+    }
+
+    public static int getActionBarHeight(Context context) {
+        int actionBarHeight = 0;
+
+        if (context == null)
+            return actionBarHeight;
+
+        TypedValue tv = new TypedValue();
+        if (context.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, context.getResources().getDisplayMetrics());
+
+        return actionBarHeight;
     }
 }

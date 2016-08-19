@@ -2,7 +2,8 @@ package com.jackfangqi.commonutil.utils;
 
 import android.util.Log;
 
-import com.jackfangqi.commonutils.BuildConfig;
+import com.jackfangqi.commonutil.BuildConfig;
+
 
 /**
  * Compiler: Android Studio

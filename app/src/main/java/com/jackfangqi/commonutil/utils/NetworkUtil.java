@@ -16,14 +16,18 @@ public final class NetworkUtil {
         throw new AssertionError();
     }
 
+    public static NetworkInfo getNetworkInfo(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        return connectivityManager == null ? null : connectivityManager.getActiveNetworkInfo();
+    }
+
     public static boolean isNetworkConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        return cm == null || cm.getActiveNetworkInfo() == null;
+        NetworkInfo networkInfo = getNetworkInfo(context);
+        return networkInfo != null && networkInfo.isConnected() && networkInfo.isAvailable();
     }
 
     public static int getNetworkType(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = cm == null ? null : cm.getActiveNetworkInfo();
+        NetworkInfo networkInfo = getNetworkInfo(context);
         return networkInfo == null ? -1 : networkInfo.getType();
     }
 

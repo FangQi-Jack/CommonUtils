@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.jackfangqi.commonutil.BuildConfig;
 
-
 /**
  * Compiler: Android Studio
  * Project: CommonUtils
@@ -13,7 +12,7 @@ import com.jackfangqi.commonutil.BuildConfig;
  * Date: 2016/8/18 17:13
  */
 public final class LogUtil {
-    private static final String LOG_TAG = "LOG_TAG";
+    private static final String LOG_TAG = LogUtil.class.getSimpleName();
 
     private static final boolean DEBUG = BuildConfig.DEBUG;
 

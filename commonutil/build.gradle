@@ -1,15 +1,16 @@
 apply plugin: 'com.android.library'
+apply from: "moduleConfig.gradle"
 
 android {
-    compileSdkVersion rootProject.ext.androidCompileSdkVersion
-    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
 //        applicationId "com.jackfangqi.commonutil"
-        minSdkVersion rootProject.ext.androidMinSdkVersion
-        targetSdkVersion rootProject.ext.androidTargetSdkVersion
-        versionCode rootProject.ext.appVersionCode
-        versionName rootProject.ext.appVersionName
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
     }
     buildTypes {
         release {
@@ -21,6 +22,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile rootProject.ext.libraries.testJUnit
-    compile rootProject.ext.libraries.supportCompatV7
+    testCompile libraries.testJUnit
+    compile libraries.supportCompatV7
 }

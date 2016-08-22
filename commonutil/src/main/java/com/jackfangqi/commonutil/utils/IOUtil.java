@@ -7,7 +7,7 @@ import java.io.IOException;
  * Compiler: Android Studio
  * Project: CommonUtil
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 9:14
  */
 public final class IoUtil {

@@ -1,8 +1,11 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
-/build
 /captures
+.gradle/
+.idea/libraries/
+.idea/workspace.xml
+CommonUtil.iml
+build/
+commonutil/commonutil.iml
+commonutil/libs/
+commonutil/src/main/res/drawable/
+local.properties

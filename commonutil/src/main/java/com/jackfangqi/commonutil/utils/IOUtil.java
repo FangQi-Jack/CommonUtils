@@ -11,6 +11,8 @@ import java.io.IOException;
  * Date: 2016/8/19 9:14
  */
 public final class IOUtil {
+    private static final String LOG_TAG = IOUtil.class.getSimpleName();
+
     private IOUtil() {
         throw new AssertionError();
     }
@@ -20,6 +22,7 @@ public final class IOUtil {
             try {
                 closeable.close();
             } catch (IOException e) {
+                LogUtil.d(LOG_TAG, e.getMessage());
                 throw new RuntimeException("IOException: " + e);
             }
         }
@@ -30,6 +33,7 @@ public final class IOUtil {
             try {
                 closeable.close();
             } catch (IOException e) {
+                LogUtil.d(LOG_TAG, e.getMessage());
 //                throw new RuntimeException("IOException: " + e);
             }
         }

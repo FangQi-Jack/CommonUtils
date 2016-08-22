@@ -151,7 +151,7 @@ public final class DiskLruCache implements Closeable {
      * "\n".
      *
      * @throws java.io.EOFException if the stream is exhausted before the next newline
-     *     character.
+     *                              character.
      */
     public static String readAsciiLine(InputStream in) throws IOException {
         // TODO: support UTF-8 here instead
@@ -207,11 +207,14 @@ public final class DiskLruCache implements Closeable {
         }
     }
 
-    /** This cache uses a single background thread to evict entries. */
+    /**
+     * This cache uses a single background thread to evict entries.
+     */
     private final ExecutorService executorService = new ThreadPoolExecutor(0, 1,
             60L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
     private final Callable<Void> cleanupCallable = new Callable<Void>() {
-        @Override public Void call() throws Exception {
+        @Override
+        public Void call() throws Exception {
             synchronized (DiskLruCache.this) {
                 if (journalWriter == null) {
                     return null; // closed
@@ -239,10 +242,10 @@ public final class DiskLruCache implements Closeable {
      * Opens the cache in {@code directory}, creating a cache if none exists
      * there.
      *
-     * @param directory a writable directory
+     * @param directory  a writable directory
      * @param appVersion
      * @param valueCount the number of values per cache entry. Must be positive.
-     * @param maxSize the maximum number of bytes this cache should use to store
+     * @param maxSize    the maximum number of bytes this cache should use to store
      * @throws java.io.IOException if reading or writing the cache directory fails
      */
     public static DiskLruCache open(File directory, int appVersion, int valueCount, long maxSize)
@@ -702,7 +705,8 @@ public final class DiskLruCache implements Closeable {
             return inputStreamToString(getInputStream(index));
         }
 
-        @Override public void close() {
+        @Override
+        public void close() {
             for (InputStream in : ins) {
                 closeQuietly(in);
             }
@@ -800,7 +804,8 @@ public final class DiskLruCache implements Closeable {
                 super(out);
             }
 
-            @Override public void write(int oneByte) {
+            @Override
+            public void write(int oneByte) {
                 try {
                     out.write(oneByte);
                 } catch (IOException e) {
@@ -808,7 +813,8 @@ public final class DiskLruCache implements Closeable {
                 }
             }
 
-            @Override public void write(byte[] buffer, int offset, int length) {
+            @Override
+            public void write(byte[] buffer, int offset, int length) {
                 try {
                     out.write(buffer, offset, length);
                 } catch (IOException e) {
@@ -816,7 +822,8 @@ public final class DiskLruCache implements Closeable {
                 }
             }
 
-            @Override public void close() {
+            @Override
+            public void close() {
                 try {
                     out.close();
                 } catch (IOException e) {
@@ -824,7 +831,8 @@ public final class DiskLruCache implements Closeable {
                 }
             }
 
-            @Override public void flush() {
+            @Override
+            public void flush() {
                 try {
                     out.flush();
                 } catch (IOException e) {
@@ -837,16 +845,24 @@ public final class DiskLruCache implements Closeable {
     private final class Entry {
         private final String key;
 
-        /** Lengths of this entry's files. */
+        /**
+         * Lengths of this entry's files.
+         */
         private final long[] lengths;
 
-        /** True if this entry has ever been published */
+        /**
+         * True if this entry has ever been published
+         */
         private boolean readable;
 
-        /** The ongoing edit or null if this entry is not being edited. */
+        /**
+         * The ongoing edit or null if this entry is not being edited.
+         */
         private Editor currentEditor;
 
-        /** The sequence number of the most recently committed edit to this entry. */
+        /**
+         * The sequence number of the most recently committed edit to this entry.
+         */
         private long sequenceNumber;
 
         private Entry(String key) {

@@ -36,6 +36,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/22 9:50
  */
+
+/**
+ * 简单的ImageLoader，实现了内存缓存和磁盘缓存
+ */
 public class SimpleImageLoader {
     private static final String LOG_TAG = SimpleImageLoader.class.getSimpleName();
 

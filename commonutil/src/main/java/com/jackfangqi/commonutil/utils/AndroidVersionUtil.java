@@ -6,7 +6,7 @@ import android.os.Build;
  * Compiler: Android Studio
  * Project: CommonUtils
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/18 17:44
  */
 public final class AndroidVersionUtil {

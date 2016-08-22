@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
  * Compiler: Android Studio
  * Project: CommonUtil
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 17:13
  */
 public final class DiskLruCache implements Closeable {

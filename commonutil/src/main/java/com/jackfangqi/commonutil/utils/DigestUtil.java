@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
  * Compiler: Android Studio
  * Project: CommonUtils
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 8:47
  */
 public final class DigestUtil {

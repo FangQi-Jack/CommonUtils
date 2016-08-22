@@ -11,7 +11,7 @@ import java.util.List;
  * Compiler: Android Studio
  * Project: CommonUtil
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 17:21
  */
 public final class PermissionUtil {

@@ -7,7 +7,7 @@ import android.text.TextWatcher;
  * Compiler: Android Studio
  * Project: CommonUtils
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/18 17:45
  */
 public class SimpleTextWatherImpl implements TextWatcher {

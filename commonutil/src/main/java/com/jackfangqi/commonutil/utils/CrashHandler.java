@@ -16,7 +16,7 @@ import java.io.PrintWriter;
  * Compiler: Android Studio
  * Project: CommonUtil
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/22 8:48
  */
 public class CrashHandler implements Thread.UncaughtExceptionHandler {

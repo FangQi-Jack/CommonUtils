@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
  * Compiler: Android Studio
  * Project: CommonUtil
  * Author: Jack Fang
- * Email: fangqi@xywy.com
+ * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 9:06
  */
 public final class FileUtil {

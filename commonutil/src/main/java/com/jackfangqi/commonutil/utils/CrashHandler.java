@@ -104,7 +104,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
      * 获取手机信息
      */
     private void dumpPhoneInfo(PrintWriter printWriter) {
-        printWriter.println("App Version: " + AppUtil.getVerionName(mContext) + "_" + AppUtil.getVersionCode(mContext));
+        printWriter.println("App Version: " + AppUtil.getVersionName(mContext) + "_" + AppUtil.getVersionCode(mContext));
 
         printWriter.println("OS Version: " + AndroidVersionUtil.getCurrentOSVersion() + "_" + AndroidVersionUtil.getCurrentSDKInt());
 

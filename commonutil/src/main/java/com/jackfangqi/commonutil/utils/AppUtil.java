@@ -20,7 +20,7 @@ public final class AppUtil {
         throw new AssertionError();
     }
 
-    public static String getVerionName(Context context) {
+    public static String getVersionName(Context context) {
         if (context == null)
             return null;
 

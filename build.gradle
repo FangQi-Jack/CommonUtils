@@ -36,5 +36,6 @@ ext.versions = [
 ]
 
 ext.libraries = [
+        testJUnit: "junit:junit:4.12",
         supportCompatV7: "com.android.support:appcompat-v7:$versions.supportLibs",
 ]

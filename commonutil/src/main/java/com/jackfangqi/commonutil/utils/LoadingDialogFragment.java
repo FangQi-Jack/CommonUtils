@@ -18,7 +18,7 @@ import com.jackfangqi.commonutil.R;
  * A simple {@link Fragment} subclass.
  */
 public class LoadingDialogFragment extends DialogFragment {
-    private static final String MSG_TAG_KEY = "msg";
+    private static final String MSG_TAG_KEY = "msg_key";
 
     private String mDialogMsg;
 

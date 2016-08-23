@@ -12,7 +12,7 @@ import android.widget.Toast;
  */
 public final class ToastUtil {
 
-    private static int DEFAULT_DURATION = Toast.LENGTH_SHORT;
+    private static final int DEFAULT_DURATION = Toast.LENGTH_SHORT;
 
     private ToastUtil() {
         throw new AssertionError();

@@ -1,6 +1,7 @@
 package com.jackfangqi.commonutil.utils;
 
 import android.app.Activity;
+import android.util.SparseArray;
 import android.view.View;
 
 /**
@@ -24,6 +25,16 @@ public final class FindViewUtil {
         return (T) context.findViewById(id);
     }
 
+    public static SparseArray<View> findViews(Activity context, int[] ids) {
+        SparseArray<View> views = new SparseArray<>();
+        if (ids != null && ids.length > 0) {
+            for (int id : ids) {
+                views.put(id, findView(context, id));
+            }
+        }
+
+        return views;
+    }
 
     @SuppressWarnings("unchecked")
     public static <T extends View> T findView(View parent, int id) {
@@ -31,5 +42,16 @@ public final class FindViewUtil {
             throw new RuntimeException("parent view cannot be null");
 
         return (T) parent.findViewById(id);
+    }
+
+    public static SparseArray<View> findViews(View parent, int[] ids) {
+        SparseArray<View> views = new SparseArray<>();
+        if (ids != null && ids.length > 0) {
+            for (int id : ids) {
+                views.put(id, findView(parent, id));
+            }
+        }
+
+        return views;
     }
 }

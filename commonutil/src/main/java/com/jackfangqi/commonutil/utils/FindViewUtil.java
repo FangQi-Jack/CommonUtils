@@ -28,7 +28,7 @@ public final class FindViewUtil {
     @SuppressWarnings("unchecked")
     public static <T extends View> T findView(View parent, int id) {
         if (parent == null)
-            throw new RuntimeException("parent cannot be null");
+            throw new RuntimeException("parent view cannot be null");
 
         return (T) parent.findViewById(id);
     }

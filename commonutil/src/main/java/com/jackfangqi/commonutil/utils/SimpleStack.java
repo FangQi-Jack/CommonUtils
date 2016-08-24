@@ -16,11 +16,11 @@ public class SimpleStack {
         this.list = new LinkedList<>();
     }
 
-    public void add(Object o) {
+    public synchronized void add(Object o) {
         this.list.push(o);
     }
 
-    public Object get() {
+    public synchronized Object get() {
         return this.list == null ? null : this.list.pop();
     }
 

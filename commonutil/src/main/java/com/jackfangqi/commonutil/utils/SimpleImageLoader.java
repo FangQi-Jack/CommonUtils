@@ -188,7 +188,7 @@ public class SimpleImageLoader {
         } finally {
             if (urlConnection != null)
                 urlConnection.disconnect();
-            IoUtil.close(in);
+            IOUtil.close(in);
         }
 
         return bitmap;
@@ -266,8 +266,8 @@ public class SimpleImageLoader {
         } finally {
             if (urlConnection != null)
                 urlConnection.disconnect();
-            IoUtil.close(out);
-            IoUtil.close(in);
+            IOUtil.close(out);
+            IOUtil.close(in);
         }
 
         return false;

@@ -10,10 +10,10 @@ import java.io.IOException;
  * Email: jackfangqi1314@gmail.com
  * Date: 2016/8/19 9:14
  */
-public final class IoUtil {
-    private static final String LOG_TAG = IoUtil.class.getSimpleName();
+public final class IOUtil {
+    private static final String LOG_TAG = IOUtil.class.getSimpleName();
 
-    private IoUtil() {
+    private IOUtil() {
         throw new AssertionError();
     }
 

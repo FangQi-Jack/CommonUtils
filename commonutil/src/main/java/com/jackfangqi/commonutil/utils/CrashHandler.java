@@ -92,7 +92,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
                     printWriter.println();
                     throwable.printStackTrace(printWriter);
                 } finally {
-                    IoUtil.closeQuietly(printWriter);
+                    IOUtil.closeQuietly(printWriter);
                 }
             }
         } else {

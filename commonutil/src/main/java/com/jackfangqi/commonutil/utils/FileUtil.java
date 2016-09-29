@@ -40,7 +40,7 @@ public final class FileUtil {
         } catch (IOException e) {
             throw new RuntimeException("IOException: " + e);
         } finally {
-            IoUtil.close(reader);
+            IOUtil.close(reader);
         }
     }
 

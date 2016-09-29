@@ -1,6 +1,7 @@
 package com.jackfangqi.commonutil.utils;
 
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -60,6 +61,7 @@ public class LoadingDialogFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        @SuppressLint("InflateParams")
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_loading_dialog, null);
 
         TextView dialogMsgText = (TextView) view.findViewById(R.id.loading_msg);

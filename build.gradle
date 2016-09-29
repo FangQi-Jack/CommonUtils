@@ -24,7 +24,7 @@ task clean(type: Delete) {
 
 ext {
     androidBuildToolsVersion = "24.0.1"
-    androidMinSdkVersion = 14
+    androidMinSdkVersion = 15
     androidTargetSdkVersion = 24
     androidCompileSdkVersion = 24
     appVersionCode = 1
@@ -32,10 +32,12 @@ ext {
 }
 
 ext.versions = [
-        supportLibs: '24.1.1',
+        testJUnit  : '4.12',
+        supportLibs: '24.2.1',
 ]
 
 ext.libraries = [
-        testJUnit: "junit:junit:4.12",
+        testJUnit      : "junit:junit:$versions.testJUnit",
         supportCompatV7: "com.android.support:appcompat-v7:$versions.supportLibs",
+        supportV4      : "com.android.support:support-v4:$versions.supportLibs"
 ]

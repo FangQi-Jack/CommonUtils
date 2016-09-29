@@ -25,11 +25,11 @@ public final class TimeUtil {
     }
 
     @SuppressLint("SimpleDateFormat")
-    public static SimpleDateFormat createDateFormat(String format) {
+    private static SimpleDateFormat createDateFormat(String format) {
         return new SimpleDateFormat(format);
     }
 
-    public static SimpleDateFormat createDateFormat(String format, Locale locale) {
+    private static SimpleDateFormat createDateFormat(String format, Locale locale) {
         return new SimpleDateFormat(format, locale);
     }
 

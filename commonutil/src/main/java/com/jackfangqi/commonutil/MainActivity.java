@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.jackfangqi.commonutil.utils.LoadingDialogFragment;
 import com.jackfangqi.commonutil.utils.LogUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         LogUtil.d("onCreate->");
+        LoadingDialogFragment dialogFragment = LoadingDialogFragment.newInstance("loading...");
+        dialogFragment.show(getSupportFragmentManager(), "MainActivity");
     }
 
     @Override

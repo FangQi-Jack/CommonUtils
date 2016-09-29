@@ -28,7 +28,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private static final String FILE_NAME = "crash";
     private static final String FILE_NAME_SUFFIX = ".trace";
 
-    private static CrashHandler sInstance = new CrashHandler();
+    private static CrashHandler sInstance;
     private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
     private Context mContext;
 
@@ -37,6 +37,12 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     }
 
     public static CrashHandler getInstance() {
+        if (sInstance == null) {
+            synchronized (CrashHandler.class) {
+                if (sInstance == null)
+                    sInstance = new CrashHandler();
+            }
+        }
         return sInstance;
     }
 

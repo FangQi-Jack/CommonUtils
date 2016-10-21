@@ -1,5 +1,6 @@
 package com.jackfangqi.commonutil;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         LogUtil.d("onCreate->");
-        LoadingDialogFragment dialogFragment = LoadingDialogFragment.newInstance("loading...");
-        dialogFragment.show(getSupportFragmentManager(), "MainActivity");
+//        LoadingDialogFragment dialogFragment = LoadingDialogFragment.newInstance("loading...");
+//        dialogFragment.show(getSupportFragmentManager(), "MainActivity");
     }
 
     @Override
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         LogUtil.d("onDestroy->");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        LogUtil.d("onNewIntent->");
     }
 
     @Override

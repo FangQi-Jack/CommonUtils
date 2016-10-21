@@ -25,4 +25,5 @@ dependencies {
     testCompile libraries.testJUnit
     compile libraries.supportCompatV7
     compile libraries.supportV4
+    compile 'com.android.support:design:24.2.1'
 }

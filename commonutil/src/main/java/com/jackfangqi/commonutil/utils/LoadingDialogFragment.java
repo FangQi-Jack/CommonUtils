@@ -1,6 +1,5 @@
 package com.jackfangqi.commonutil.utils;
 
-
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
@@ -65,7 +64,7 @@ public class LoadingDialogFragment extends DialogFragment {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_loading_dialog, null);
 
         TextView dialogMsgText = (TextView) view.findViewById(R.id.loading_msg);
-        if (mDialogMsg == null || "".equals(mDialogMsg))
+        if (null == mDialogMsg || "".equals(mDialogMsg))
             mDialogMsg = getActivity().getResources().getString(R.string.loading_dialog_default_msg);
         dialogMsgText.setText(mDialogMsg);
 

@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         LogUtil.d("onCreate->");
-//        LoadingDialogFragment dialogFragment = LoadingDialogFragment.newInstance("loading...");
-//        dialogFragment.show(getSupportFragmentManager(), "MainActivity");
+        LoadingDialogFragment dialogFragment = LoadingDialogFragment.newInstance("loading...");
+        dialogFragment.show(getSupportFragmentManager(), "MainActivity");
     }
 
     @Override

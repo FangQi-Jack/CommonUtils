@@ -5,9 +5,12 @@ import android.content.res.Configuration;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import com.jackfangqi.commonutil.utils.LoadingDialogFragment;
 import com.jackfangqi.commonutil.utils.LogUtil;
+import com.jackfangqi.commonutil.utils.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
 

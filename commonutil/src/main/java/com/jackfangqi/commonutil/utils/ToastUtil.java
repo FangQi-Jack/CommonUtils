@@ -1,6 +1,8 @@
 package com.jackfangqi.commonutil.utils;
 
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
 /**
@@ -48,6 +50,21 @@ public final class ToastUtil {
 
     public static void show(Context context, String msg, int duration, Object... args) {
         show(context, String.format(msg, args), duration);
+    }
+
+    public static void showCustomToast(Context context, int layoutId, int gravity, int xOffSet,
+                                       int yOffSet) {
+        showCustomToast(context, layoutId, gravity, xOffSet, yOffSet, DEFAULT_DURATION);
+    }
+
+    public static void showCustomToast(Context context, int layoutId, int gravity, int xOffSet,
+                                       int yOffSet, int duration) {
+        Toast t = new Toast(context);
+        View view = LayoutInflater.from(context).inflate(layoutId, null);
+        t.setView(view);
+        t.setDuration(duration);
+        t.setGravity(gravity, xOffSet, yOffSet);
+        t.show();
     }
 
 }

@@ -13,6 +13,7 @@ import com.jackfangqi.commonutil.utils.LogUtil;
 import com.jackfangqi.commonutil.utils.ToastUtil;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String LOG_TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,20 +9,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jackfangqi.commonutil.MainActivity">
+    tools:context="com.jackfangqi.commonutil.MainActivity"
+    >
 
-    <com.jackfangqi.commonutil.utils.CustomImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:borderRadius="4dp"
-        app:src="@mipmap/icon_pic"
-        app:type="circle" />
+  <com.jackfangqi.commonutil.utils.CustomImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:borderRadius="4dp"
+      app:src="@mipmap/icon_pic"
+      app:type="circle"
+      />
 
-    <com.jackfangqi.commonutil.utils.CustomImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:borderRadius="16dp"
-        app:src="@mipmap/icon_pic"
-        app:type="round" />
+  <com.jackfangqi.commonutil.utils.CustomImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:borderRadius="16dp"
+      app:src="@mipmap/icon_pic"
+      app:type="round"
+      />
+
+  <Button
+      android:id="@+id/start_second_activity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="START SECOND ACTIVITY"
+      />
+  <Button
+      android:id="@+id/show_loading_dialog"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="SHOW LOADING DIALOG"
+      />
 
 </LinearLayout>

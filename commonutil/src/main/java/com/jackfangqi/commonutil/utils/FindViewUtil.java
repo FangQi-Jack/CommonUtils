@@ -20,7 +20,7 @@ public final class FindViewUtil {
     @SuppressWarnings("unchecked")
     public static <T extends View> T findView(Activity context, int id) {
         if (context == null)
-            throw new RuntimeException("context cannot be null");
+            throw new IllegalArgumentException("context cannot be null");
 
         return (T) context.findViewById(id);
     }
@@ -39,7 +39,7 @@ public final class FindViewUtil {
     @SuppressWarnings("unchecked")
     public static <T extends View> T findView(View parent, int id) {
         if (parent == null)
-            throw new RuntimeException("parent view cannot be null");
+            throw new IllegalArgumentException("parent view cannot be null");
 
         return (T) parent.findViewById(id);
     }

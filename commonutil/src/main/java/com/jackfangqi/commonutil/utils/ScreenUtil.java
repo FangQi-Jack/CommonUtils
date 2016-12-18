@@ -19,15 +19,13 @@ public final class ScreenUtil {
     }
 
     public static float dp2Px(Context context, float dp) {
-        if (context == null)
-            return -1;
+        if (context == null) return -1;
 
         return dp * context.getResources().getDisplayMetrics().density;
     }
 
     public static float px2Dp(Context context, float px) {
-        if (context == null)
-            return -1;
+        if (context == null) return -1;
 
         return px / context.getResources().getDisplayMetrics().density;
     }
@@ -41,11 +39,9 @@ public final class ScreenUtil {
     }
 
     public static int getScreenWidthPixels(Context context) {
-        if (context == null)
-            return -1;
+        if (context == null) return -1;
 
-        if (!(context instanceof Activity))
-            return -1;
+        if (!(context instanceof Activity)) return -1;
 
         DisplayMetrics metrics = new DisplayMetrics();
         ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -53,11 +49,9 @@ public final class ScreenUtil {
     }
 
     public static int getScreenHeightPixels(Context context) {
-        if (context == null)
-            return -1;
+        if (context == null) return -1;
 
-        if (!(context instanceof Activity))
-            return -1;
+        if (!(context instanceof Activity)) return -1;
 
         DisplayMetrics metrics = new DisplayMetrics();
         ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -67,12 +61,13 @@ public final class ScreenUtil {
     public static int getStatusBarHeight(Context context) {
         int statusBarHeight = 0;
 
-        if (context == null)
-            return statusBarHeight;
+        if (context == null) return statusBarHeight;
 
-        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0)
+        int resourceId =
+                context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
             statusBarHeight = context.getResources().getDimensionPixelSize(resourceId);
+        }
 
         return statusBarHeight;
     }
@@ -80,12 +75,13 @@ public final class ScreenUtil {
     public static int getActionBarHeight(Context context) {
         int actionBarHeight = 0;
 
-        if (context == null)
-            return actionBarHeight;
+        if (context == null) return actionBarHeight;
 
         TypedValue tv = new TypedValue();
-        if (context.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, context.getResources().getDisplayMetrics());
+        if (context.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,
+                    context.getResources().getDisplayMetrics());
+        }
 
         return actionBarHeight;
     }

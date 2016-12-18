@@ -108,7 +108,29 @@ public final class AndroidVersionUtil {
     /**
      * Android 6.0+
      */
-    public static boolean isAfterMarshmallow() {
-        return getCurrentSDKInt() > Build.VERSION_CODES.M;
+    public static boolean isMarshmallowOrHigher() {
+        return getCurrentSDKInt() >= Build.VERSION_CODES.M;
     }
+
+    /**
+     * Android 7.0
+     */
+    public static boolean isNougat() {
+        return getCurrentSDKInt() == Build.VERSION_CODES.N;
+    }
+
+    /**
+     * Android 7.0+
+     */
+    public static boolean isNougatOrHigher() {
+        return getCurrentSDKInt() >= Build.VERSION_CODES.N;
+    }
+
+    /**
+     * Android 7.1.1(Nougat++)
+     */
+    public static boolean isNougatMR1() {
+        return getCurrentSDKInt() == Build.VERSION_CODES.N_MR1;
+    }
+
 }

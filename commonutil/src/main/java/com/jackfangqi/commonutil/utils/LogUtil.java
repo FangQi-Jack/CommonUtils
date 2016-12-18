@@ -1,7 +1,6 @@
 package com.jackfangqi.commonutil.utils;
 
 import android.util.Log;
-
 import com.jackfangqi.commonutil.BuildConfig;
 
 /**
@@ -127,4 +126,5 @@ public final class LogUtil {
         if (DEBUG)
             Log.wtf(tag, log, tr);
     }
+
 }

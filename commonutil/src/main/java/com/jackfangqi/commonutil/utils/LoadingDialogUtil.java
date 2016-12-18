@@ -18,13 +18,18 @@ public class LoadingDialogUtil {
     private static AlertDialog dialog;
 
     public static void showLoadingDialog(Context context, CharSequence loadingText) {
+        showLoadingDialog(context, loadingText, false);
+    }
+
+    public static void showLoadingDialog(Context context, CharSequence loadingText,
+            boolean cancelable) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         @SuppressLint("InflateParams") View view =
                 LayoutInflater.from(context).inflate(R.layout.fragment_loading_dialog, null);
         TextView loadingTv = (TextView) view.findViewById(R.id.loading_msg);
         loadingTv.setText(loadingText);
         builder.setView(view);
-        builder.setCancelable(false);
+        builder.setCancelable(cancelable);
         dialog = builder.create();
         dialog.show();
     }
